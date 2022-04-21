@@ -5,7 +5,7 @@ $colour-secondary:#FF79DA;
 $colour-tertiary: #99E2D0;
 @mixin titles-style{
    font-family: 'Shrikhand', cursive;
-   font-size: 1.2rem;
+   font-size: 1.5rem;
 }
 /* reset */
 *{
@@ -23,7 +23,11 @@ body,p,a,ul,li{
 }
 
 /* fonts */
-
+h1{
+   display: inline-block;
+   margin:auto;
+   @include titles-style();
+}
 /* base styles */
 
 
