@@ -1,0 +1,30 @@
+/* variables, mixins & functions */
+
+$colour-primary: #9356DC;
+$colour-secondary:#FF79DA;
+$colour-tertiary: #99E2D0;
+@mixin titles-style{
+   font-family: 'Shrikhand', cursive;
+   font-size: 1.2rem;
+}
+/* reset */
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body,p,a,ul,li{
+   text-decoration: none;
+   list-style: none;
+}
+.wrapper{
+   width: 100%;
+   margin:auto;
+}
+
+/* fonts */
+
+/* base styles */
+
+
+

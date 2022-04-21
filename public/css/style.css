@@ -1,0 +1,22 @@
+/* variables, mixins & functions */
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, p, a, ul, li {
+  text-decoration: none;
+  list-style: none;
+}
+
+.wrapper {
+  width: 100%;
+  margin: auto;
+}
+
+/* fonts */
+/* base styles */
+
+/*# sourceMappingURL=style.css.map */

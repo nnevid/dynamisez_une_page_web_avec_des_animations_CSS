@@ -1,0 +1,19 @@
+{
+  "name": "dynamisez_une_page_web_avec_des_animations_css",
+  "version": "1.0.0",
+  "description": "openclassrooms-p3",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nnevid/dynamisez_une_page_web_avec_des_animations_CSS.git"
+  },
+  "author": "nevidrahalmartinez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nnevid/dynamisez_une_page_web_avec_des_animations_CSS/issues"
+  },
+  "homepage": "https://github.com/nnevid/dynamisez_une_page_web_avec_des_animations_CSS#readme"
+}
