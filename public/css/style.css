@@ -9,19 +9,20 @@
 body, p, a, ul, li {
   text-decoration: none;
   list-style: none;
+  font-family: "Roboto", sans-serif;
 }
 
 .wrapper {
-  width: 100%;
+  max-width: 1440px;
   margin: auto;
 }
 
 /* fonts */
 h1 {
-  display: inline-block;
-  margin: auto;
   font-family: "Shrikhand", cursive;
   font-size: 1.5rem;
+  margin: auto;
+  text-align: center;
 }
 
 /* base styles */
