@@ -122,7 +122,6 @@ form {
 }
 .function-prev-list__item > i {
   margin-right: 30px;
-  color: #7E7E7E;
 }
 
 .fa-store--highlight {
@@ -141,6 +140,7 @@ form {
   background-color: white;
   border-radius: 25px;
   position: relative;
+  box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.1);
 }
 .restaurant-bloc__heading {
   margin-top: 10px;
@@ -192,6 +192,7 @@ footer {
   color: #fff;
   margin-bottom: 10px;
   text-align: left;
+  cursor: pointer;
 }
 .footer-nav__link i {
   color: #fff;
