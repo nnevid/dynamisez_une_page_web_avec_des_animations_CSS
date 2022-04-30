@@ -32,7 +32,7 @@ body, p, a, ul, li {
 }
 
 /* fonts */
-h1 {
+.main__heading {
   font-family: "Shrikhand", cursive;
   font-size: 1.7rem;
   margin: auto;
@@ -207,5 +207,16 @@ footer {
 }
 
 /*Syle for Menus pages */
+.main__heading--menu {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.7rem;
+  margin: auto;
+  text-align: center;
+  margin-right: 27%;
+}
+.main__heading--menu .fa-arrow-left {
+  margin-right: 28%;
+  font-size: 1.3rem;
+}
 
 /*# sourceMappingURL=style.css.map */

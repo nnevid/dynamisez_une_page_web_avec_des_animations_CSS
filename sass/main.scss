@@ -35,7 +35,8 @@ body,p,a,ul,li{
 }
 
 /* fonts */
-h1{@include titles-style();}
+.main__heading{@include titles-style();}
+
 
 /* base styles */
 header {margin:10px 0 20px 0;}
@@ -206,3 +207,11 @@ footer ul{@extend %mgLeft20;}
 .fa-handshake-angle{margin-right: 10px;}
 
 /*Syle for Menus pages */
+.main__heading--menu{
+   @include titles-style();
+   margin-right: 27%;
+   .fa-arrow-left{
+      margin-right: 28%;
+      font-size: 1.3rem;
+   }
+}
