@@ -9,6 +9,7 @@ $white: #fff;
 %mgLeft10{margin-left: 10px;}
 %mgLeft20{margin-left: 20px;}
 %headingMargin{margin:20px 0 20px 20px; }
+/* fonts */
 @mixin titles-style{
    font-family: 'Shrikhand', cursive;
    font-size: 1.7rem;
@@ -33,13 +34,13 @@ body,p,a,ul,li{
    margin:auto;
    height:auto;
 }
-
-/* fonts */
-.main__heading{@include titles-style();}
-
-
 /* base styles */
-header {margin:10px 0 20px 0;}
+
+.main__heading{
+   @include titles-style();
+   margin: 10px 0 20px 0;
+}
+
 form {
    text-align: center;
    background: linear-gradient(180deg, rgba(223,223,223,1) 0%, rgba(234,234,234,1) 100%);
@@ -167,12 +168,12 @@ form {
    object-fit: cover;
    border-radius: 25px 25px 0 0;
 }
-.fa-heart{
+.fa-heart-home{
    font-size: 1.6rem;
    position:absolute;
    right:20px;
    bottom: 20px;
-}
+   }
 
 /*footer*/
 
@@ -206,7 +207,17 @@ footer ul{@extend %mgLeft20;}
 .fa-utensils{margin-right: 20px;}
 .fa-handshake-angle{margin-right: 10px;}
 
-/*Syle for Menus pages */
+/*    Syle for Menus pages Templates   */
+   /*General Layout*/
+.command-btn{text-align: center;}
+.menu-prev__img{
+   width:100%;
+   object-fit: cover;
+}
+/*  Menu  Layout  */
+.menu-prev{
+   background-color: $main-background;
+}
 .main__heading--menu{
    @include titles-style();
    margin-right: 27%;

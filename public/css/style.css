@@ -11,6 +11,7 @@ footer ul {
   margin: 20px 0 20px 20px;
 }
 
+/* fonts */
 /* reset */
 * {
   margin: 0;
@@ -31,16 +32,12 @@ body, p, a, ul, li {
   height: auto;
 }
 
-/* fonts */
+/* base styles */
 .main__heading {
   font-family: "Shrikhand", cursive;
   font-size: 1.7rem;
   margin: auto;
   text-align: center;
-}
-
-/* base styles */
-header {
   margin: 10px 0 20px 0;
 }
 
@@ -165,7 +162,7 @@ form {
   border-radius: 25px 25px 0 0;
 }
 
-.fa-heart {
+.fa-heart-home {
   font-size: 1.6rem;
   position: absolute;
   right: 20px;
@@ -206,7 +203,22 @@ footer {
   margin-right: 10px;
 }
 
-/*Syle for Menus pages */
+/*    Syle for Menus pages Templates   */
+/*General Layout*/
+.command-btn {
+  text-align: center;
+}
+
+.menu-prev__img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/*  Menu  Layout  */
+.menu-prev {
+  background-color: #F6F6F6;
+}
+
 .main__heading--menu {
   font-family: "Shrikhand", cursive;
   font-size: 1.7rem;
