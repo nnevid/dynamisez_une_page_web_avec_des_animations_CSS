@@ -1,4 +1,12 @@
 /* variables, mixins, extensions  & functions */
+.fa-arrow-left {
+  position: absolute;
+}
+
+.menu-prev, .menu-prev__img {
+  position: relative;
+}
+
 .restaurant-bloc__byline, .restaurant-bloc__heading {
   margin-left: 10px;
 }
@@ -36,9 +44,8 @@ body, p, a, ul, li {
 .main__heading {
   font-family: "Shrikhand", cursive;
   font-size: 1.7rem;
-  margin: auto;
-  text-align: center;
   margin: 10px 0 20px 0;
+  text-align: center;
 }
 
 form {
@@ -212,11 +219,25 @@ footer {
 .menu-prev__img {
   width: 100%;
   object-fit: cover;
+  z-index: -99;
 }
 
 /*  Menu  Layout  */
 .menu-prev {
   background-color: #F6F6F6;
+  margin-top: -47px;
+  z-index: 1;
+  position: relative;
+  border: none;
+  margin-top: -47px;
+  padding: 25px 10px 5px;
+  border-radius: 25px 25px;
+}
+
+.fa-arrow-left {
+  font-size: 1.3rem;
+  left: 5%;
+  top: 1%;
 }
 
 .main__heading--menu {
@@ -224,11 +245,33 @@ footer {
   font-size: 1.7rem;
   margin: auto;
   text-align: center;
-  margin-right: 27%;
 }
-.main__heading--menu .fa-arrow-left {
-  margin-right: 28%;
-  font-size: 1.3rem;
+
+.menu-prev__restaurant-heading {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.6rem;
+}
+.menu-prev__restaurant-heading i {
+  margin-right: 20px;
+}
+.menu-prev__menu-heading {
+  margin-top: 25px;
+  text-transform: uppercase;
+  font-weight: 400;
+  position: relative;
+}
+.menu-prev__menu-heading::after {
+  content: "";
+  width: 11%;
+  height: 2px;
+  position: absolute;
+  background-color: #99E2D0;
+  bottom: -4px;
+  left: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
