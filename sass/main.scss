@@ -209,26 +209,17 @@ footer ul{@extend %mgLeft20;}
 
 /*    Syle for Menus pages Templates   */
    /*General Layout*/
-.command-btn{text-align: center;}
+.command-btn{
+   text-align: center;
+   margin-top: 20px;
+}
 .menu-prev__img{
    width:100%;
    object-fit: cover;
    @extend %relative-position;
    z-index: -99;
 }
-/*  Menu  Layout  */
-.menu-prev{
-   background-color: $main-background;
-   @extend %relative-position;
-   margin-top: -47px;
-   z-index: 1;
-   position: relative;
-   border: none;
-   margin-top:-47px;
-   padding:25px 10px 5px;
-   border-radius: 25px 25px;
-
-}
+/* Menus Templates Header */
 .fa-arrow-left{
    @extend %absolute-position;
    font-size: 1.3rem;
@@ -240,7 +231,19 @@ footer ul{@extend %mgLeft20;}
    margin:auto;
    text-align: center;
 }
+/*  Menu  Layout  */
+.menu-prev{
+   background-color: $main-background;
+   @extend %relative-position;
+   margin-top: -47px;
+   z-index: 1;
+   position: relative;
+   border: none;
+   margin-top:-47px;
+   padding:25px 20px 5px;
+   border-radius: 25px 25px;
 
+}
 .menu-prev{
    
    &__restaurant-heading{
@@ -270,3 +273,20 @@ footer ul{@extend %mgLeft20;}
       left: 0;
    }
 }
+.carte-prev{
+   margin-top: 20px;
+   &-card{
+      background-color: #fff;
+      border-radius: 20px;
+      padding:15px;
+      margin-top: 20px;
+   }
+   &__byline{
+      margin-top:10px;
+      display: flex;
+      justify-content: space-between;
+   }
+   &__price{font-weight: 600;}
+
+}
+

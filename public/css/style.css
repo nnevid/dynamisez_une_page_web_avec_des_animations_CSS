@@ -214,6 +214,7 @@ footer {
 /*General Layout*/
 .command-btn {
   text-align: center;
+  margin-top: 20px;
 }
 
 .menu-prev__img {
@@ -222,18 +223,7 @@ footer {
   z-index: -99;
 }
 
-/*  Menu  Layout  */
-.menu-prev {
-  background-color: #F6F6F6;
-  margin-top: -47px;
-  z-index: 1;
-  position: relative;
-  border: none;
-  margin-top: -47px;
-  padding: 25px 10px 5px;
-  border-radius: 25px 25px;
-}
-
+/* Menus Templates Header */
 .fa-arrow-left {
   font-size: 1.3rem;
   left: 5%;
@@ -245,6 +235,18 @@ footer {
   font-size: 1.7rem;
   margin: auto;
   text-align: center;
+}
+
+/*  Menu  Layout  */
+.menu-prev {
+  background-color: #F6F6F6;
+  margin-top: -47px;
+  z-index: 1;
+  position: relative;
+  border: none;
+  margin-top: -47px;
+  padding: 25px 20px 5px;
+  border-radius: 25px 25px;
 }
 
 .menu-prev__restaurant-heading {
@@ -272,6 +274,24 @@ footer {
   background-color: #99E2D0;
   bottom: -4px;
   left: 0;
+}
+
+.carte-prev {
+  margin-top: 20px;
+}
+.carte-prev-card {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 15px;
+  margin-top: 20px;
+}
+.carte-prev__byline {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.carte-prev__price {
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=style.css.map */
