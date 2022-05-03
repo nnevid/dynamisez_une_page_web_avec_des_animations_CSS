@@ -275,18 +275,56 @@ footer ul{@extend %mgLeft20;}
 }
 .carte-prev{
    margin-top: 20px;
+
    &-card{
       background-color: #fff;
       border-radius: 20px;
-      padding:15px;
       margin-top: 20px;
+      overflow: hidden;
+      height:80px;
    }
+   &__heading{margin:15px 10px 5px 10px;}
    &__byline{
-      margin-top:10px;
+      margin:10px 0 0 10px;
       display: flex;
       justify-content: space-between;
+      font-size: 0.9rem;
    }
-   &__price{font-weight: 600;}
+   &__price{
+      font-weight: 600;
+      margin-right: 20px;
+   }
+   &-link{
+      width: 100%;
+      transition: all  0.5s ease-out;
+      display: inline-block;
+      vertical-align: middle;
+      height:80px;
+   }
+   // &-link:hover + .carte-prev-card--hidden{
+   //    display:block;
+   // }
+   &-card--hidden{
+      width:20%;
+      text-align: center;
+      background-color: $colour-tertiary;
+      color:#fff; 
+      height:80px;
+      border-radius: 0 20px 20px 0;
+      display:inline-block;
+      vertical-align: middle;    
+      }
+
+   &-card--hidden i{
+      font-size: 1.7rem;
+      margin-top: 30%;
+   }
+   /*Animations in menu card*/
+   // &-link:hover{
+   //    width:78%;
+   // }
+   
 
 }
 
+ 

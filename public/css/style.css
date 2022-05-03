@@ -278,20 +278,48 @@ footer {
 
 .carte-prev {
   margin-top: 20px;
+  /*Animations in menu card*/
 }
 .carte-prev-card {
   background-color: #fff;
   border-radius: 20px;
-  padding: 15px;
   margin-top: 20px;
+  overflow: hidden;
+  height: 80px;
+}
+.carte-prev__heading {
+  margin: 15px 10px 5px 10px;
 }
 .carte-prev__byline {
-  margin-top: 10px;
+  margin: 10px 0 0 10px;
   display: flex;
   justify-content: space-between;
+  font-size: 0.9rem;
 }
 .carte-prev__price {
   font-weight: 600;
+  margin-right: 20px;
+}
+.carte-prev-link {
+  width: 100%;
+  transition: all 0.5s ease-out;
+  display: inline-block;
+  vertical-align: middle;
+  height: 80px;
+}
+.carte-prev-card--hidden {
+  width: 20%;
+  text-align: center;
+  background-color: #99E2D0;
+  color: #fff;
+  height: 80px;
+  border-radius: 0 20px 20px 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+.carte-prev-card--hidden i {
+  font-size: 1.7rem;
+  margin-top: 30%;
 }
 
 /*# sourceMappingURL=style.css.map */
