@@ -15,6 +15,7 @@ $white: #fff;
 @mixin titles-style{
    font-family: 'Shrikhand', cursive;
    font-size: 1.7rem;
+   text-align:center;
 }
 /* reset */
 *{
@@ -35,10 +36,11 @@ body,p,a,ul,li{
 }
 /* base styles */
 
-.main__heading{
+.main-header__title{
    @include titles-style();
-   margin: 10px 0 20px 0;
-   text-align:center;
+   &--marginTp{
+      margin: 10px 0 20px 0;
+   }
 }
 
 form {
@@ -221,16 +223,12 @@ footer ul{@extend %mgLeft20;}
 }
 /* Menus Templates Header */
 .fa-arrow-left{
-   @extend %absolute-position;
    font-size: 1.3rem;
    left: 5%;
    top: 1%;
+   position: absolute;
 }
-.main__heading--menu{
-   @include titles-style();
-   margin:auto;
-   text-align: center;
-}
+
 /*  Menu  Layout  */
 .menu-prev{
    background-color: $main-background;
@@ -276,9 +274,9 @@ footer ul{@extend %mgLeft20;}
 }
 // Mixin for Dishes Selection Animation
 @mixin base-animation{
-   animation-duration: 0.7s;
-   animation-fill-mode: both;
-   animation-timing-function: ease-in-out;
+   -webkit-animation-duration: 0.7s;
+   -webkit-animation-fill-mode: both;
+   -webkit-animation-timing-function: ease-in-out;
 }
 /*Style & animations for selection card */
 .carte-prev{
@@ -299,13 +297,21 @@ footer ul{@extend %mgLeft20;}
    }
    &__byline{
       margin:10px 0 0 10px;
-      display: flex;
-      justify-content: space-between;
+      display: inline-block;
       font-size: 0.8rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: 80%;
+      vertical-align: bottom;
    }
    &__price{
       font-weight: 600;
-      margin-right: 20px;
+      margin-right: 0px;
+      font-size: 0.8rem;
+      margin-left: 10px;
+      display: inline-block;
+      vertical-align: middle;
    }
    &-link{
       width: 100%;

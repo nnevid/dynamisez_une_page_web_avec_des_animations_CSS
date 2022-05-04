@@ -1,8 +1,4 @@
 /* variables, mixins, extensions  & functions */
-.fa-arrow-left {
-  position: absolute;
-}
-
 .menu-prev, .menu-prev__img {
   position: relative;
 }
@@ -41,11 +37,13 @@ body, p, a, ul, li {
 }
 
 /* base styles */
-.main__heading {
+.main-header__title {
   font-family: "Shrikhand", cursive;
   font-size: 1.7rem;
-  margin: 10px 0 20px 0;
   text-align: center;
+}
+.main-header__title--marginTp {
+  margin: 10px 0 20px 0;
 }
 
 form {
@@ -228,13 +226,7 @@ footer {
   font-size: 1.3rem;
   left: 5%;
   top: 1%;
-}
-
-.main__heading--menu {
-  font-family: "Shrikhand", cursive;
-  font-size: 1.7rem;
-  margin: auto;
-  text-align: center;
+  position: absolute;
 }
 
 /*  Menu  Layout  */
@@ -252,6 +244,7 @@ footer {
 .menu-prev__restaurant-heading {
   font-family: "Shrikhand", cursive;
   font-size: 1.7rem;
+  text-align: center;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -294,13 +287,21 @@ footer {
 }
 .carte-prev__byline {
   margin: 10px 0 0 10px;
-  display: flex;
-  justify-content: space-between;
+  display: inline-block;
   font-size: 0.8rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 80%;
+  vertical-align: bottom;
 }
 .carte-prev__price {
   font-weight: 600;
-  margin-right: 20px;
+  margin-right: 0px;
+  font-size: 0.8rem;
+  margin-left: 10px;
+  display: inline-block;
+  vertical-align: middle;
 }
 .carte-prev-link {
   width: 100%;
@@ -312,18 +313,18 @@ footer {
   position: relative;
   z-index: 100;
   transition: all 1.5s ease-in-out;
-  animation-duration: 0.7s;
-  animation-fill-mode: both;
-  animation-timing-function: ease-in-out;
+  -webkit-animation-duration: 0.7s;
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-timing-function: ease-in-out;
   animation-name: out;
   transform-origin: right;
 }
 .carte-prev-link:hover {
   animation-name: checked;
   transition: all 1.5s ease-in-out;
-  animation-duration: 0.7s;
-  animation-fill-mode: both;
-  animation-timing-function: ease-in-out;
+  -webkit-animation-duration: 0.7s;
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-timing-function: ease-in-out;
 }
 .carte-prev-card--hidden i {
   font-size: 1.7rem;
@@ -343,9 +344,9 @@ footer {
 }
 .carte-prev-card:hover .carte-prev-card--green i {
   animation-name: circleRotation;
-  animation-duration: 0.7s;
-  animation-fill-mode: both;
-  animation-timing-function: ease-in-out;
+  -webkit-animation-duration: 0.7s;
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-timing-function: ease-in-out;
 }
 .carte-prev-card--green {
   width: 20%;
