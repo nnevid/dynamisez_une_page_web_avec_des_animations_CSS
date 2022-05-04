@@ -82,6 +82,9 @@ form {
       margin-bottom: 20px;
       font-weight: 500;
       font-size: 1rem;
+      width: 60%;
+      height: 50px;
+      line-height: 0rem;
    }
    &__btn:hover{
       cursor: pointer;
@@ -272,6 +275,7 @@ footer ul{@extend %mgLeft20;}
       left: 0;
    }
 }
+
 // Mixin for Dishes Selection Animation
 @mixin base-animation{
    -webkit-animation-duration: 0.7s;
