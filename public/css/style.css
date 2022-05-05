@@ -95,6 +95,13 @@ form {
   cursor: pointer;
 }
 
+.fa-heart {
+  position: absolute;
+  right: 5%;
+  font-size: 1.6rem;
+  opacity: 0.5;
+}
+
 /* 2nd Section*/
 .function-prev-list {
   text-align: center;
@@ -287,6 +294,11 @@ footer {
 .carte-prev__heading {
   margin: 15px 10px 5px 10px;
   font-size: 1.1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 80%;
+  padding-right: 30px;
 }
 .carte-prev__byline {
   margin-left: 10px;

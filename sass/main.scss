@@ -90,7 +90,12 @@ form {
       cursor: pointer;
    }
 }
-
+.fa-heart{
+   position: absolute;
+   right: 5%;
+   font-size: 1.6rem;
+   opacity:0.5;
+}
  
 /* 2nd Section*/
 .function-prev__heading{
@@ -299,6 +304,11 @@ footer ul{@extend %mgLeft20;}
    &__heading{
       margin:15px 10px 5px 10px;
       font-size: 1.1rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: 80%;
+      padding-right: 30px;
    }
    &__byline{
       margin-left:10px;
