@@ -72,8 +72,9 @@ form {
   padding: 20px;
 }
 .explore-prev__heading {
-  font-weight: 800;
+  font-weight: 700;
   margin-bottom: 10px;
+  font-size: 1.8rem;
 }
 .explore-prev__byline {
   margin-bottom: 10px;
@@ -86,10 +87,11 @@ form {
   background: linear-gradient(162deg, #FF79DA 0%, #9356DC 100%);
   margin-bottom: 20px;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 0.9rem;
   width: 60%;
   height: 50px;
   line-height: 0rem;
+  width: 65%;
 }
 .explore-prev__btn:hover {
   cursor: pointer;

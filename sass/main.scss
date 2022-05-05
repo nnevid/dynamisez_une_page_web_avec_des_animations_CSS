@@ -67,8 +67,9 @@ form {
       padding:20px;
    }
    &__heading{
-      font-weight: 800;
+      font-weight: 700;
       margin-bottom: 10px;
+      font-size: 1.8rem;
    }
    &__byline{
       margin-bottom: 10px;
@@ -81,10 +82,11 @@ form {
       background: linear-gradient(162deg, $colour-secondary 0%, $colour-primary 100%);
       margin-bottom: 20px;
       font-weight: 500;
-      font-size: 1rem;
+      font-size: 0.9rem;
       width: 60%;
       height: 50px;
       line-height: 0rem;
+      width:65%
    }
    &__btn:hover{
       cursor: pointer;
