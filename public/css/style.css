@@ -293,7 +293,7 @@ footer {
 }
 .carte-prev__heading {
   margin: 15px 10px 5px 10px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -303,7 +303,7 @@ footer {
 .carte-prev__byline {
   margin-left: 10px;
   display: inline-block;
-  font-size: 1rem;
+  font-size: 0.9rem;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;

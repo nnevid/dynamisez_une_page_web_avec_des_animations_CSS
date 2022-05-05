@@ -282,13 +282,13 @@ footer ul{@extend %mgLeft20;}
    }
 }
 
+/*Style & animations for selection card */
 // Mixin for Dishes Selection Animation
 @mixin base-animation{
    -webkit-animation-duration: 0.7s;
    -webkit-animation-fill-mode: both;
    -webkit-animation-timing-function: ease-in-out;
 }
-/*Style & animations for selection card */
 .carte-prev{
    margin-top: 20px;
 
@@ -303,7 +303,7 @@ footer ul{@extend %mgLeft20;}
    }
    &__heading{
       margin:15px 10px 5px 10px;
-      font-size: 1.1rem;
+      font-size: 1rem;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
@@ -313,7 +313,7 @@ footer ul{@extend %mgLeft20;}
    &__byline{
       margin-left:10px;
       display: inline-block;
-      font-size: 1rem;
+      font-size: 0.9rem;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
