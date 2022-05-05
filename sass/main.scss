@@ -187,13 +187,14 @@ footer{
    padding-bottom: 20px;
 }
 .footer-prev{
-   color:white;
+   
    padding-top: 10px;
    &__heading{
       @extend %headingMargin;
       font-family: 'Shrikhand', cursive;
       letter-spacing: .02rem;
       font-size: 1.4rem;
+      color:white;
    }
 }
 footer ul{@extend %mgLeft20;}
@@ -291,18 +292,18 @@ footer ul{@extend %mgLeft20;}
       border-radius: 20px;
       margin-top: 20px;
       overflow: hidden;
-      height:80px;
+      height:75px;
       width: 100%;
       
    }
    &__heading{
       margin:15px 10px 5px 10px;
-      font-size: 0.9rem;
+      font-size: 1.1rem;
    }
    &__byline{
-      margin:10px 0 0 10px;
+      margin-left:10px;
       display: inline-block;
-      font-size: 0.8rem;
+      font-size: 1rem;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
@@ -321,7 +322,7 @@ footer ul{@extend %mgLeft20;}
       width: 100%;
       display: inline-block;
       vertical-align: middle;
-      height:80px;
+      height:75px;
       border-radius: 20px 0 0 20px;
       background-color: #fff;
       position: relative;
@@ -337,21 +338,21 @@ footer ul{@extend %mgLeft20;}
       @include base-animation();
       
    }
-   &-card--hidden i{
-      font-size: 1.7rem;
-      transform: rotate(-180deg);
-      opacity: 0;
-      animation-name: rotationOut;
-   }
    &-card--hidden{
       width:100%;
       border-radius: 0 20px 20px 0;
-      height:80px;
+      height:auto;
       display:inline-block;
       vertical-align: middle;
       position: relative;
       z-index: 0;
       top:-100%;
+   }
+   &-card--hidden i{
+      font-size: 1.7rem;
+      transform: rotate(-180deg);
+      opacity: 0;
+      animation-name: rotationOut;
    }
    &-card:hover .carte-prev-card--green i{
       animation-name: circleRotation;
