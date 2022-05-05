@@ -287,9 +287,9 @@ footer ul{@extend %mgLeft20;}
 /*Style & animations for selection card */
 // Mixin for Dishes Selection Animation
 @mixin base-animation{
-   -webkit-animation-duration: 0.7s;
-   -webkit-animation-fill-mode: both;
-   -webkit-animation-timing-function: ease-in-out;
+   animation-duration: 0.7s;
+   animation-fill-mode: both;
+   animation-timing-function: ease-in-out;
 }
 .carte-prev{
    margin-top: 20px;
