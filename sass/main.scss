@@ -53,15 +53,15 @@ body,p,a,ul,li{
 }
 .lds-ring div {
   box-sizing: border-box;
-  display: block;
+  display: inline-block;
   position: absolute;
   width: 120px;
   height: 120px;
   margin: 8px;
-  border: 8px solid #fff;
+  border: 28px solid;
   border-radius: 50%;
-  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) 5, bg-change 3s ease-in-out;
-  border-color: rgb(227, 28, 180) transparent transparent transparent;
+  animation: lds-ring 1.35s cubic-bezier(0.5, 0, 0.5, 1) 2, bg-change 3s ease-in-out;
+  border-color: $colour-primary transparent transparent transparent;
   left: 31%;
   top: 33%;
   visibility: hidden;
@@ -154,14 +154,94 @@ form {
       
    }
 }
-.fa-heart{
-   position: absolute;
-   right: 5%;
-   font-size: 1.6rem;
-   opacity:0.5;
+/* Heart Icon setup for Home Page & Menu Pages*/
+.fa{
+   &-heart{
+      position: absolute;
+      right: 5%;
+      font-size: 1.6rem;
+      cursor: pointer;
+   
+   }
+   &-gradient{
+      background: $colour-primary;
+      background-image: linear-gradient( $colour-secondary, $colour-primary);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transform-origin: bottom;
+   }
+   &-white{
+      background-color: $white;
+      height: auto;
+      transition: all 0.9 ease-in-out;
+      animation: fillOut 0.9s ease-in-out forwards;
+   }
+   &-grey{
+      background-color: $main-background;
+      height: auto;
+      transition: all 0.9 ease-in-out;
+      animation: fillOut 0.9s ease-in-out forwards;
+   }
+   &-white:hover{
+      animation: fillHeart 0.9s ease-in-out forwards;
+   }
+   &-grey:hover{
+      animation: fillHeart 0.9s ease-in-out forwards;
+   }
+   &-menu{
+      margin-right: 20px;
+      position: absolute;
+      top: 33px;
+   }
+   
 }
- 
-/* 2nd Section  Fonctionnement */
+/* Keyframes for Heart Animation*/
+@keyframes fillHeart{
+   0%{
+      height:auto;
+      opacity:1;
+   }
+   25%{
+      height:25px;
+      opacity:0.8;
+   }
+   50%{
+      height:15px;
+      opacity:0.5;
+   }
+   75%{
+      height:5px;
+      opacity:0.2;
+   }
+   100%{
+      height:0px;
+      opacity:0;
+   }
+}
+@keyframes fillOut{
+   0%{
+      height:0;
+      opacity:0;
+   }
+   25%{
+      height:5px;
+      opacity:0.2;
+   }
+   50%{
+      height:15px;
+      opacity:0.5;
+   }
+   75%{
+      height:25px;
+      opacity:0.8;
+   }
+   100%{
+      height:auto;
+      opacity:1;
+   }
+}
+/* 2nd Section  "Fonctionnement" */
+
 .function-prev__heading{
    @extend %headingMargin;
 }
@@ -247,12 +327,6 @@ form {
    object-fit: cover;
    border-radius: 25px 25px 0 0;
 }
-.fa-heart-home{
-   font-size: 1.6rem;
-   position:absolute;
-   right:20px;
-   bottom: 20px;
-   }
 
 /*footer*/
 
@@ -284,9 +358,11 @@ footer ul{@extend %mgLeft20;}
    }
    
 }
-.fa-utensils{margin-right: 20px;}
-.fa-handshake-angle{margin-right: 10px;}
-
+/*Footer Icons Layout*/
+.fa{
+   &-utensils{margin-right: 20px;}
+   &-handshake-angle{margin-right: 10px;}
+}
 /*    Syle for Menus pages Templates   */
    /*General Layout*/
 .command-btn{
@@ -307,7 +383,7 @@ footer ul{@extend %mgLeft20;}
    position: absolute;
 }
 
-/*  Menu  Layout  */
+/*  Layout for Menus Pages */
 .menu-prev{
    background-color: $main-background;
    @extend %relative-position;
@@ -328,10 +404,6 @@ footer ul{@extend %mgLeft20;}
       justify-content: space-between;
       align-items: center;
       font-size: 1.6rem;
-   }
-   &__restaurant-heading i{
-      margin-right: 20px;
-      
    }
    &__menu-heading{
       margin-top:25px; 
@@ -491,9 +563,6 @@ footer ul{@extend %mgLeft20;}
 }
 
 
-// @keyframes appear{
-//    from{width:0%}
-//    to {width:20%}
-// }
+
 
  
