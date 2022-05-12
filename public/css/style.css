@@ -419,6 +419,8 @@ footer {
   overflow: hidden;
   height: 75px;
   width: 100%;
+  animation: menuCard 0.9s linear 0.3s forwards;
+  opacity: 0;
 }
 .carte-prev__heading {
   margin: 15px 10px 5px 10px;
@@ -513,7 +515,29 @@ footer {
   transition: all 0.7s ease-in-out;
 }
 
+.carte-prev div:nth-child(1) {
+  animation-delay: 0.35s;
+}
+
+.carte-prev div:nth-child(2) {
+  animation-delay: 0.7s;
+}
+
+.carte-prev div:nth-child(3) {
+  animation-delay: 0.9s;
+}
+
 /*   Animations Key Frames   */
+@keyframes menuCard {
+  from {
+    transform: translate(0, 35%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0%);
+    opacity: 1;
+  }
+}
 @keyframes checked {
   from {
     width: 100%;

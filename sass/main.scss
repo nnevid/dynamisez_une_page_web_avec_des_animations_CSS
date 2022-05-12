@@ -432,6 +432,7 @@ footer ul{@extend %mgLeft20;}
 }
 .carte-prev{
    margin-top: 20px;
+   
 
    &-card{
       background-color: #fff;
@@ -440,6 +441,8 @@ footer ul{@extend %mgLeft20;}
       overflow: hidden;
       height:75px;
       width: 100%;
+      animation: menuCard 0.9s linear 0.3s forwards;
+      opacity:0;
       
    }
    &__heading{
@@ -530,8 +533,23 @@ footer ul{@extend %mgLeft20;}
       transition: all 0.7s ease-in-out;
    }
 }
-
+.carte-prev div:nth-child(1){animation-delay: 0.35s;}
+.carte-prev div:nth-child(2){animation-delay: 0.7s;}
+.carte-prev div:nth-child(3){animation-delay: .9s;}
 /*   Animations Key Frames   */
+
+@keyframes menuCard {
+   from{
+      transform: translate(0, 35%);
+      opacity: 0;
+   }
+   to{
+      transform: translate(0, 0%);
+      opacity: 1;
+   }
+}
+
+
 @keyframes checked{
    from{width:100%}
    to{width:80%}
