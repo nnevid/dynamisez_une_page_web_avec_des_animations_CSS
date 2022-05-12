@@ -169,12 +169,13 @@ form {
   background-image: linear-gradient(#FF79DA, #9356DC);
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
   transform-origin: bottom;
 }
 .fa-white {
   background-color: #fff;
   height: auto;
-  transition: all 0.9 ease-in-out;
+  transition: all 0.9s ease-in-out;
   animation: fillOut 0.9s ease-in-out forwards;
 }
 .fa-grey {
