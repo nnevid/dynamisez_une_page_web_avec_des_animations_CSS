@@ -1,0 +1,112 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body,p,a,ul,li{
+   text-decoration: none;
+   list-style: none;
+   font-family: 'Roboto', sans-serif;
+   color: black;
+}
+.wrapper{
+   max-width: 1440px;
+   margin:auto;
+   height:auto;
+   
+}
+/* base styles */
+/*Loading Ring*/
+.lds-ring {
+   display: inline-block;
+   position: fixed;
+   width: 100%;
+   height: 100%;
+   z-index: 100; 
+   background-color: rgba(0,0,0, 0.9);;
+   animation: bg-change 3s ease-in-out;
+   visibility: hidden;
+ }
+ .lds-ring div {
+   box-sizing: border-box;
+   display: inline-block;
+   position: absolute;
+   width: 120px;
+   height: 120px;
+   margin: 8px;
+   border: 28px solid;
+   border-radius: 50%;
+   animation: lds-ring 1.35s cubic-bezier(0.5, 0, 0.5, 1) 2, bg-change 3s ease-in-out;
+   border-color: $colour-primary transparent transparent transparent;
+   left: 31%;
+   top: 33%;
+   visibility: hidden;
+   
+ }
+ .lds-ring div:nth-child(1) {
+   animation-delay: -0.45s;
+ }
+ .lds-ring div:nth-child(2) {
+   animation-delay: -0.3s;
+ }
+ .lds-ring div:nth-child(3) {
+   animation-delay: -0.15s;
+ }
+
+/*Header*/
+.main-header__title{
+   @include titles-style();
+   &--marginTp{
+      margin: 10px 0 20px 0;
+   }
+}
+
+form {
+   text-align: center;
+   background: linear-gradient(180deg, rgba(223,223,223,1) 0%, rgba(234,234,234,1) 100%);
+   height: 50px;
+   padding:15px;
+   }
+#cities {
+   background: transparent;
+   border:none;
+   font-size: 1rem;
+   font-weight: 600;
+   margin-left:2%;
+}
+.fa-location-dot{margin-left: 23%;}
+
+/*Footer */
+footer{
+   background-color: $footer-background;
+   padding-bottom: 20px;
+}
+.footer-prev{
+   
+   padding-top: 10px;
+   &__heading{
+      @extend %headingMargin;
+      font-family: 'Shrikhand', cursive;
+      letter-spacing: .02rem;
+      font-size: 1.4rem;
+      color:white;
+   }
+}
+footer ul{@extend %mgLeft20;}
+.footer-nav{
+   &__link{
+      color:$white;
+      margin-bottom: 10px;
+      text-align: left;
+      cursor: pointer;
+   }
+   &__link i{
+      color:$white;      
+   }
+   
+}
+/*Footer Icons Layout*/
+.fa{
+   &-utensils{margin-right: 20px;}
+   &-handshake-angle{margin-right: 10px;}
+}

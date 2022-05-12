@@ -11,12 +11,120 @@ footer ul {
   margin-left: 20px;
 }
 
-.footer-prev__heading, .restaurant-prev__heading, .function-prev__heading {
+.restaurant-prev__heading, .function-prev__heading, .footer-prev__heading {
   margin: 20px 0 20px 20px;
 }
 
 /* mixin for title */
-/* reset */
+/* KF for loading ring*/
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes bg-change {
+  from {
+    visibility: hidden;
+  }
+  to {
+    visibility: visible;
+  }
+}
+/* Keyframes for Heart Animation*/
+@keyframes fillHeart {
+  0% {
+    height: auto;
+    opacity: 1;
+  }
+  25% {
+    height: 25px;
+    opacity: 0.8;
+  }
+  50% {
+    height: 15px;
+    opacity: 0.5;
+  }
+  75% {
+    height: 5px;
+    opacity: 0.2;
+  }
+  100% {
+    height: 0px;
+    opacity: 0;
+  }
+}
+@keyframes fillOut {
+  0% {
+    height: 0;
+    opacity: 0;
+  }
+  25% {
+    height: 5px;
+    opacity: 0.2;
+  }
+  50% {
+    height: 15px;
+    opacity: 0.5;
+  }
+  75% {
+    height: 25px;
+    opacity: 0.8;
+  }
+  100% {
+    height: auto;
+    opacity: 1;
+  }
+}
+/*KF for Menu's Cards*/
+@keyframes menuCard {
+  from {
+    transform: translate(0, 35%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0%);
+    opacity: 1;
+  }
+}
+@keyframes checked {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 80%;
+  }
+}
+@keyframes out {
+  from {
+    width: 80%;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes circleRotation {
+  from {
+    transform: rotate(-180deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+}
+@keyframes rotationOut {
+  from {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: rotate(-180deg);
+    opacity: 0;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -36,7 +144,8 @@ body, p, a, ul, li {
   height: auto;
 }
 
-/*Loading spinner animation */
+/* base styles */
+/*Loading Ring*/
 .lds-ring {
   display: inline-block;
   position: fixed;
@@ -76,23 +185,7 @@ body, p, a, ul, li {
   animation-delay: -0.15s;
 }
 
-@keyframes lds-ring {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes bg-change {
-  from {
-    visibility: hidden;
-  }
-  to {
-    visibility: visible;
-  }
-}
-/* base styles */
+/*Header*/
 .main-header__title {
   font-family: "Shrikhand", cursive;
   font-size: 1.7rem;
@@ -119,6 +212,40 @@ form {
 
 .fa-location-dot {
   margin-left: 23%;
+}
+
+/*Footer */
+footer {
+  background-color: #353535;
+  padding-bottom: 20px;
+}
+
+.footer-prev {
+  padding-top: 10px;
+}
+.footer-prev__heading {
+  font-family: "Shrikhand", cursive;
+  letter-spacing: 0.02rem;
+  font-size: 1.4rem;
+  color: white;
+}
+
+.footer-nav__link {
+  color: #fff;
+  margin-bottom: 10px;
+  text-align: left;
+  cursor: pointer;
+}
+.footer-nav__link i {
+  color: #fff;
+}
+
+/*Footer Icons Layout*/
+.fa-utensils {
+  margin-right: 20px;
+}
+.fa-handshake-angle {
+  margin-right: 10px;
 }
 
 /* 1st Section Explore  */
@@ -196,51 +323,6 @@ form {
   top: 33px;
 }
 
-/* Keyframes for Heart Animation*/
-@keyframes fillHeart {
-  0% {
-    height: auto;
-    opacity: 1;
-  }
-  25% {
-    height: 25px;
-    opacity: 0.8;
-  }
-  50% {
-    height: 15px;
-    opacity: 0.5;
-  }
-  75% {
-    height: 5px;
-    opacity: 0.2;
-  }
-  100% {
-    height: 0px;
-    opacity: 0;
-  }
-}
-@keyframes fillOut {
-  0% {
-    height: 0;
-    opacity: 0;
-  }
-  25% {
-    height: 5px;
-    opacity: 0.2;
-  }
-  50% {
-    height: 15px;
-    opacity: 0.5;
-  }
-  75% {
-    height: 25px;
-    opacity: 0.8;
-  }
-  100% {
-    height: auto;
-    opacity: 1;
-  }
-}
 /* 2nd Section  "Fonctionnement" */
 .function-prev-list {
   text-align: center;
@@ -317,42 +399,7 @@ form {
   border-radius: 25px 25px 0 0;
 }
 
-/*footer*/
-footer {
-  background-color: #353535;
-  padding-bottom: 20px;
-}
-
-.footer-prev {
-  padding-top: 10px;
-}
-.footer-prev__heading {
-  font-family: "Shrikhand", cursive;
-  letter-spacing: 0.02rem;
-  font-size: 1.4rem;
-  color: white;
-}
-
-.footer-nav__link {
-  color: #fff;
-  margin-bottom: 10px;
-  text-align: left;
-  cursor: pointer;
-}
-.footer-nav__link i {
-  color: #fff;
-}
-
-/*Footer Icons Layout*/
-.fa-utensils {
-  margin-right: 20px;
-}
-.fa-handshake-angle {
-  margin-right: 10px;
-}
-
 /*    Syle for Menus pages Templates   */
-/*General Layout*/
 .command-btn {
   text-align: center;
   margin-top: 20px;
@@ -409,7 +456,7 @@ footer {
   left: 0;
 }
 
-/*Style & animations for selection card */
+/*Style for selection card */
 .carte-prev {
   margin-top: 20px;
 }
@@ -528,52 +575,9 @@ footer {
   animation-delay: 0.9s;
 }
 
+/* reset */
+/*Loading spinner animation */
+/*footer*/
 /*   Animations Key Frames   */
-@keyframes menuCard {
-  from {
-    transform: translate(0, 35%);
-    opacity: 0;
-  }
-  to {
-    transform: translate(0, 0%);
-    opacity: 1;
-  }
-}
-@keyframes checked {
-  from {
-    width: 100%;
-  }
-  to {
-    width: 80%;
-  }
-}
-@keyframes out {
-  from {
-    width: 80%;
-  }
-  to {
-    width: 100%;
-  }
-}
-@keyframes circleRotation {
-  from {
-    transform: rotate(-180deg);
-    opacity: 0;
-  }
-  to {
-    transform: rotate(0deg);
-    opacity: 1;
-  }
-}
-@keyframes rotationOut {
-  from {
-    transform: rotate(0deg);
-    opacity: 1;
-  }
-  to {
-    transform: rotate(-180deg);
-    opacity: 0;
-  }
-}
 
 /*# sourceMappingURL=style.css.map */
