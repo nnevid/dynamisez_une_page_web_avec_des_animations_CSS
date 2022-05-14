@@ -1,4 +1,4 @@
-/* variables, mixins, extensions  & functions */
+//  variables, mixins, extensions, maps, functions, etc 
 $colour-primary: #9356DC;
 $colour-secondary:#FF79DA;
 $colour-tertiary: #99E2D0;
@@ -14,7 +14,7 @@ $white: #fff;
 %mgLeft10{margin-left: 10px;}
 %mgLeft20{margin-left: 20px;}
 %headingMargin{margin:20px 0 20px 20px; }
-/* mixin for title */
+// mixin for title 
 @mixin titles-style{
    font-family: 'Shrikhand', cursive;
    font-size: 1.7rem;
@@ -26,3 +26,11 @@ $white: #fff;
    animation-fill-mode: both;
    animation-timing-function: ease-in-out;
 }
+// Map for responsive
+ $breakpoints: (mobile:500px, tablet:800px, desktop:900px);
+
+ @mixin tablet-only{
+    @media screen and (max-width: map-get($breakpoints, tablet)){
+       @content;
+    }
+ }
