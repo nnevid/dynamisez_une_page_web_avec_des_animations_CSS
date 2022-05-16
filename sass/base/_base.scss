@@ -74,16 +74,23 @@ form {
    font-weight: 600;
    margin-left:2%;
 }
-.fa-location-dot{margin-left: 23%;}
+.fa-location-dot{
+   margin-left: 23%;
+   @include tablet-only{
+      margin-left:0%;
+   }
+}
 
 /*Footer */
 footer{
    background-color: $footer-background;
    padding-bottom: 20px;
 }
-.footer-prev{
-   
+.footer-prev{   
    padding-top: 10px;
+   @include tablet-only{
+      text-align: center;
+   }
    &__heading{
       @extend %headingMargin;
       font-family: 'Shrikhand', cursive;
@@ -99,6 +106,8 @@ footer ul{@extend %mgLeft20;}
       margin-bottom: 10px;
       text-align: left;
       cursor: pointer;
+      width:40%;
+      @include tablet-only{margin:10px auto;}
    }
    &__link i{
       color:$white;      

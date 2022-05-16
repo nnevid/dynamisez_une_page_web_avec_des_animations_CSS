@@ -30,7 +30,7 @@ $white: #fff;
  $breakpoints: (mobile:500px, tablet:800px, desktop:900px);
 
  @mixin tablet-only{
-    @media screen and (max-width: map-get($breakpoints, tablet)){
+    @media screen and (min-width: map-get($breakpoints, tablet)){
        @content;
     }
  }

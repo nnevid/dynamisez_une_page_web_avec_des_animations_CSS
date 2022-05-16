@@ -211,6 +211,11 @@ form {
 .fa-location-dot {
   margin-left: 23%;
 }
+@media screen and (min-width: 800px) {
+  .fa-location-dot {
+    margin-left: 0%;
+  }
+}
 
 /*Footer */
 footer {
@@ -220,6 +225,11 @@ footer {
 
 .footer-prev {
   padding-top: 10px;
+}
+@media screen and (min-width: 800px) {
+  .footer-prev {
+    text-align: center;
+  }
 }
 .footer-prev__heading {
   font-family: "Shrikhand", cursive;
@@ -233,6 +243,12 @@ footer {
   margin-bottom: 10px;
   text-align: left;
   cursor: pointer;
+  width: 40%;
+}
+@media screen and (min-width: 800px) {
+  .footer-nav__link {
+    margin: 10px auto;
+  }
 }
 .footer-nav__link i {
   color: #fff;
@@ -269,7 +285,6 @@ footer {
   margin-bottom: 20px;
   font-weight: 500;
   font-size: 0.9rem;
-  width: 60%;
   height: 50px;
   line-height: 0rem;
   width: 65%;
@@ -280,6 +295,11 @@ footer {
   cursor: pointer;
   background: linear-gradient(162deg, rgba(255, 121, 218, 0.8) 0%, rgba(147, 86, 220, 0.8) 100%);
   box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.3);
+}
+@media screen and (min-width: 800px) {
+  .explore-prev__btn {
+    width: 30%;
+  }
 }
 
 /* Heart Icon setup for Home Page & Menu Pages*/
@@ -322,8 +342,19 @@ footer {
 }
 
 /* 2nd Section  "Fonctionnement" */
+@media screen and (min-width: 800px) {
+  .function-prev__heading {
+    text-align: center;
+  }
+}
 .function-prev-list {
   text-align: center;
+}
+@media screen and (min-width: 800px) {
+  .function-prev-list {
+    width: 50%;
+    margin: auto;
+  }
 }
 .function-prev-list__item {
   margin: 0 30px 20px;
@@ -335,6 +366,11 @@ footer {
   font-size: 1.1rem;
   box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.1);
   transition: all 0.5s ease-in-out;
+}
+@media screen and (min-width: 800px) {
+  .function-prev-list__item {
+    margin: 20px auto;
+  }
 }
 .function-prev-list__span {
   position: absolute;
@@ -365,6 +401,17 @@ footer {
   background-color: #F6F6F6;
   padding: 20px 0 30px 0;
 }
+@media screen and (min-width: 800px) {
+  .restaurant-prev__heading {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 800px) {
+  .restaurant-prev__container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
 
 .restaurant-bloc {
   width: 90%;
@@ -373,6 +420,11 @@ footer {
   border-radius: 25px;
   position: relative;
   box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.1);
+}
+@media screen and (min-width: 800px) {
+  .restaurant-bloc {
+    width: 40%;
+  }
 }
 .restaurant-bloc__heading {
   margin-top: 10px;
