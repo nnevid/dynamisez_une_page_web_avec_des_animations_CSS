@@ -18,14 +18,27 @@ body,p,a,ul,li{
 /* base styles */
 /*Loading Ring*/
 .lds-ring {
-   display: inline-block;
+   display: flex;
    position: fixed;
    width: 100%;
    height: 100%;
    z-index: 100; 
    background-color: rgba(0,0,0, 0.9);;
    animation: bg-change 3s ease-in-out;
+   justify-content: center;
+   align-items: center;
    visibility: hidden;
+ }
+ .fa-snipet{
+   margin-right: 0px;
+   background: $colour-primary;
+   background-image: linear-gradient( $colour-secondary, $colour-primary);
+   background-clip: text;
+   -webkit-text-fill-color: transparent;
+   -webkit-background-clip: text;
+   animation: lds-ring 1.35s cubic-bezier(0.5, 0, 0.5, 1) 2, bg-change 3s ease-in-out, scale-change 0.8s ease-in-out;
+   font-size: 3rem;
+   ;
  }
  .lds-ring div {
    box-sizing: border-box;
@@ -34,12 +47,10 @@ body,p,a,ul,li{
    width: 120px;
    height: 120px;
    margin: 8px;
-   border: 28px solid;
+   border: 10px solid;
    border-radius: 50%;
    animation: lds-ring 1.35s cubic-bezier(0.5, 0, 0.5, 1) 2, bg-change 3s ease-in-out;
    border-color: $colour-primary transparent transparent transparent;
-   left: 31%;
-   top: 33%;
    visibility: hidden;
    
  }
@@ -80,7 +91,49 @@ form {
       margin-left:0%;
    }
 }
-
+/* Heart Icon setup for Home Page & Menu Pages*/
+.fa{
+   &-heart{
+      position: absolute;
+      right: 5%;
+      font-size: 1.6rem;
+      cursor: pointer;
+   
+   }
+   &-gradient{
+      background: $colour-primary;
+      background-image: linear-gradient( $colour-secondary, $colour-primary);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      transform-origin: bottom;
+   }
+   &-white{
+      background-color: $white;
+      height: auto;
+      transition: all 0.9s ease-in-out;
+      animation: fillOut 0.9s ease-in-out forwards;
+   }
+   &-grey{
+      background-color: $main-background;
+      height: auto;
+      transition: all 0.9 ease-in-out;
+      animation: fillOut 0.9s ease-in-out forwards;
+   }
+   &-white:hover{
+      animation: fillHeart 0.9s ease-in-out forwards;
+   }
+   &-grey:hover{
+      animation: fillHeart 0.9s ease-in-out forwards;
+   }
+   &-menu{
+      margin-right: 20px;
+      position: absolute;
+      top: 33px;
+      @include tablet-only{margin-right: 15%;}
+   }
+   
+}
 /*Footer */
 footer{
    background-color: $footer-background;
@@ -88,15 +141,17 @@ footer{
 }
 .footer-prev{   
    padding-top: 10px;
-   @include tablet-only{
-      text-align: center;
-   }
+   @include tablet-only{text-align: center;}
+   @include desktop{text-align: left;}
    &__heading{
       @extend %headingMargin;
       font-family: 'Shrikhand', cursive;
       letter-spacing: .02rem;
       font-size: 1.4rem;
       color:white;
+   }
+   &__heading{
+      @include desktop{margin-left: 5%;}
    }
 }
 footer ul{@extend %mgLeft20;}
@@ -106,8 +161,9 @@ footer ul{@extend %mgLeft20;}
       margin-bottom: 10px;
       text-align: left;
       cursor: pointer;
-      width:40%;
+      width:60%;
       @include tablet-only{margin:10px auto;}
+      @include desktop{margin:10px 10px 10px 3%;}
    }
    &__link i{
       color:$white;      
@@ -116,6 +172,6 @@ footer ul{@extend %mgLeft20;}
 }
 /*Footer Icons Layout*/
 .fa{
-   &-utensils{margin-right: 20px;}
+   &-footer{margin-right: 20px;}
    &-handshake-angle{margin-right: 10px;}
 }

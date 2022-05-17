@@ -33,54 +33,12 @@
          background: $btn-bg-hover;
          box-shadow: $btn-shadow-hover;
          }
-      @include tablet-only{
-         width:30%;
-      }
+      @include tablet-only{width:30%;}
+      @include desktop{width:20%;}
       
    }
 }
-/* Heart Icon setup for Home Page & Menu Pages*/
-.fa{
-   &-heart{
-      position: absolute;
-      right: 5%;
-      font-size: 1.6rem;
-      cursor: pointer;
-   
-   }
-   &-gradient{
-      background: $colour-primary;
-      background-image: linear-gradient( $colour-secondary, $colour-primary);
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      -webkit-background-clip: text;
-      transform-origin: bottom;
-   }
-   &-white{
-      background-color: $white;
-      height: auto;
-      transition: all 0.9s ease-in-out;
-      animation: fillOut 0.9s ease-in-out forwards;
-   }
-   &-grey{
-      background-color: $main-background;
-      height: auto;
-      transition: all 0.9 ease-in-out;
-      animation: fillOut 0.9s ease-in-out forwards;
-   }
-   &-white:hover{
-      animation: fillHeart 0.9s ease-in-out forwards;
-   }
-   &-grey:hover{
-      animation: fillHeart 0.9s ease-in-out forwards;
-   }
-   &-menu{
-      margin-right: 20px;
-      position: absolute;
-      top: 33px;
-   }
-   
-}
+
 /* 2nd Section  "Fonctionnement" */
 
 .function-prev{
@@ -95,6 +53,11 @@
    @include tablet-only{
       width:50%;
       margin:auto;
+   }
+   @include desktop{
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
    }
    &__item{
       margin:0 30px 20px;
@@ -122,6 +85,10 @@
       font-size: 0.9rem;
       font-weight: 500;
       left: -10px;
+      @include desktop{
+         left: 50%;
+         top: -13px;
+      }
    }
    &__item>i{
       margin-right:30px;
@@ -155,6 +122,7 @@
          display: flex;
          flex-wrap: wrap;
       }
+     
    }
    
 }
@@ -166,6 +134,7 @@
    position: relative;
    box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.1);
    @include tablet-only{width:40%;}
+   @include desktop{width:23%;}
    &__heading{
       @extend %mgLeft10;
       margin-top: 10px;

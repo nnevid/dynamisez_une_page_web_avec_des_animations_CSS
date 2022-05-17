@@ -6,13 +6,36 @@
     }
    100% {
      transform: rotate(360deg);
-     
-    }
+   }
  }
- @keyframes bg-change{
+@keyframes bg-change{
     from{visibility: hidden;}
     to{visibility: visible;}
 }
+@keyframes scale-change{
+  0%{
+      transform: scale(0);
+      opacity: 0;
+   }
+   25%{
+      transform: scale(0.3);
+      opacity: 0.3;
+   }
+   50%{
+      transform: scale(0.6);
+      opacity: 0.6;
+   }
+   75%{
+      transform: scale(0.9);
+      opacity: 0.9;
+   }
+   100%{
+      transform: scale(0);
+      opacity: 0;
+   }
+
+}
+
 /* Keyframes for Heart Animation*/
 @keyframes fillHeart{
     0%{

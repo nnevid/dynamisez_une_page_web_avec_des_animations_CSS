@@ -31,6 +31,28 @@ footer ul {
     visibility: visible;
   }
 }
+@keyframes scale-change {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  25% {
+    transform: scale(0.3);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(0.6);
+    opacity: 0.6;
+  }
+  75% {
+    transform: scale(0.9);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
 /* Keyframes for Heart Animation*/
 @keyframes fillHeart {
   0% {
@@ -145,14 +167,27 @@ body, p, a, ul, li {
 /* base styles */
 /*Loading Ring*/
 .lds-ring {
-  display: inline-block;
+  display: flex;
   position: fixed;
   width: 100%;
   height: 100%;
   z-index: 100;
   background-color: rgba(0, 0, 0, 0.9);
   animation: bg-change 3s ease-in-out;
+  justify-content: center;
+  align-items: center;
   visibility: hidden;
+}
+
+.fa-snipet {
+  margin-right: 0px;
+  background: #9356DC;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: lds-ring 1.35s cubic-bezier(0.5, 0, 0.5, 1) 2, bg-change 3s ease-in-out, scale-change 0.8s ease-in-out;
+  font-size: 3rem;
 }
 
 .lds-ring div {
@@ -162,12 +197,10 @@ body, p, a, ul, li {
   width: 120px;
   height: 120px;
   margin: 8px;
-  border: 28px solid;
+  border: 10px solid;
   border-radius: 50%;
   animation: lds-ring 1.35s cubic-bezier(0.5, 0, 0.5, 1) 2, bg-change 3s ease-in-out;
   border-color: #9356DC transparent transparent transparent;
-  left: 31%;
-  top: 33%;
   visibility: hidden;
 }
 
@@ -217,6 +250,50 @@ form {
   }
 }
 
+/* Heart Icon setup for Home Page & Menu Pages*/
+.fa-heart {
+  position: absolute;
+  right: 5%;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+.fa-gradient {
+  background: #9356DC;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  transform-origin: bottom;
+}
+.fa-white {
+  background-color: #fff;
+  height: auto;
+  transition: all 0.9s ease-in-out;
+  animation: fillOut 0.9s ease-in-out forwards;
+}
+.fa-grey {
+  background-color: #F6F6F6;
+  height: auto;
+  transition: all 0.9 ease-in-out;
+  animation: fillOut 0.9s ease-in-out forwards;
+}
+.fa-white:hover {
+  animation: fillHeart 0.9s ease-in-out forwards;
+}
+.fa-grey:hover {
+  animation: fillHeart 0.9s ease-in-out forwards;
+}
+.fa-menu {
+  margin-right: 20px;
+  position: absolute;
+  top: 33px;
+}
+@media screen and (min-width: 800px) {
+  .fa-menu {
+    margin-right: 15%;
+  }
+}
+
 /*Footer */
 footer {
   background-color: #353535;
@@ -231,11 +308,21 @@ footer {
     text-align: center;
   }
 }
+@media screen and (min-width: 961px) {
+  .footer-prev {
+    text-align: left;
+  }
+}
 .footer-prev__heading {
   font-family: "Shrikhand", cursive;
   letter-spacing: 0.02rem;
   font-size: 1.4rem;
   color: white;
+}
+@media screen and (min-width: 961px) {
+  .footer-prev__heading {
+    margin-left: 5%;
+  }
 }
 
 .footer-nav__link {
@@ -243,11 +330,16 @@ footer {
   margin-bottom: 10px;
   text-align: left;
   cursor: pointer;
-  width: 40%;
+  width: 60%;
 }
 @media screen and (min-width: 800px) {
   .footer-nav__link {
     margin: 10px auto;
+  }
+}
+@media screen and (min-width: 961px) {
+  .footer-nav__link {
+    margin: 10px 10px 10px 3%;
   }
 }
 .footer-nav__link i {
@@ -255,7 +347,7 @@ footer {
 }
 
 /*Footer Icons Layout*/
-.fa-utensils {
+.fa-footer {
   margin-right: 20px;
 }
 .fa-handshake-angle {
@@ -301,44 +393,10 @@ footer {
     width: 30%;
   }
 }
-
-/* Heart Icon setup for Home Page & Menu Pages*/
-.fa-heart {
-  position: absolute;
-  right: 5%;
-  font-size: 1.6rem;
-  cursor: pointer;
-}
-.fa-gradient {
-  background: #9356DC;
-  background-image: linear-gradient(#FF79DA, #9356DC);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  transform-origin: bottom;
-}
-.fa-white {
-  background-color: #fff;
-  height: auto;
-  transition: all 0.9s ease-in-out;
-  animation: fillOut 0.9s ease-in-out forwards;
-}
-.fa-grey {
-  background-color: #F6F6F6;
-  height: auto;
-  transition: all 0.9 ease-in-out;
-  animation: fillOut 0.9s ease-in-out forwards;
-}
-.fa-white:hover {
-  animation: fillHeart 0.9s ease-in-out forwards;
-}
-.fa-grey:hover {
-  animation: fillHeart 0.9s ease-in-out forwards;
-}
-.fa-menu {
-  margin-right: 20px;
-  position: absolute;
-  top: 33px;
+@media screen and (min-width: 961px) {
+  .explore-prev__btn {
+    width: 20%;
+  }
 }
 
 /* 2nd Section  "Fonctionnement" */
@@ -354,6 +412,13 @@ footer {
   .function-prev-list {
     width: 50%;
     margin: auto;
+  }
+}
+@media screen and (min-width: 961px) {
+  .function-prev-list {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
   }
 }
 .function-prev-list__item {
@@ -384,6 +449,12 @@ footer {
   font-size: 0.9rem;
   font-weight: 500;
   left: -10px;
+}
+@media screen and (min-width: 961px) {
+  .function-prev-list__span {
+    left: 50%;
+    top: -13px;
+  }
 }
 .function-prev-list__item > i {
   margin-right: 30px;
@@ -424,6 +495,11 @@ footer {
 @media screen and (min-width: 800px) {
   .restaurant-bloc {
     width: 40%;
+  }
+}
+@media screen and (min-width: 961px) {
+  .restaurant-bloc {
+    width: 23%;
   }
 }
 .restaurant-bloc__heading {
@@ -480,15 +556,30 @@ footer {
   padding: 25px 20px 5px;
   border-radius: 25px 25px;
 }
+@media screen and (min-width: 961px) {
+  .menu-prev {
+    margin-top: -30%;
+  }
+}
 
+@media screen and (min-width: 800px) {
+  .menu-prev {
+    padding: 25px 15% 5px;
+  }
+}
+@media screen and (min-width: 961px) {
+  .menu-prev {
+    padding: 25px 20% 5px;
+  }
+}
 .menu-prev__restaurant-heading {
   font-family: "Shrikhand", cursive;
-  font-size: 1.7rem;
-  text-align: center;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   font-size: 1.6rem;
+}
+@media screen and (min-width: 961px) {
+  .menu-prev__restaurant-heading {
+    text-align: center;
+  }
 }
 .menu-prev__menu-heading {
   margin-top: 25px;
@@ -546,6 +637,11 @@ footer {
   margin-left: 10px;
   display: inline-block;
   vertical-align: middle;
+}
+@media screen and (min-width: 800px) {
+  .carte-prev__price {
+    margin-left: 10%;
+  }
 }
 .carte-prev-link {
   width: 100%;

@@ -29,16 +29,15 @@
    margin-top:-47px;
    padding:25px 20px 5px;
    border-radius: 25px 25px;
-
+   @include desktop{margin-top: -30%;}
 }
 .menu-prev{
-   
+   @include tablet-only{padding:25px 15% 5px;} 
+   @include desktop{padding:25px 20% 5px;} 
    &__restaurant-heading{
-      @include titles-style();
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      font-family: "Shrikhand", cursive;
       font-size: 1.6rem;
+      @include desktop {text-align: center;}  
    }
    &__menu-heading{
       margin-top:25px; 
@@ -99,6 +98,7 @@
       margin-left: 10px;
       display: inline-block;
       vertical-align: middle;
+      @include tablet-only{margin-left: 10%;}
    }
    &-link{
       width: 100%;
