@@ -15,8 +15,8 @@ body,p,a,ul,li{
    height:auto;
    
 }
-/* base styles */
-/*Loading Ring*/
+/* Base Styles */
+/* Loading Spinner */
 .lds-ring {
    display: flex;
    position: fixed;
@@ -36,7 +36,7 @@ body,p,a,ul,li{
    background-clip: text;
    -webkit-text-fill-color: transparent;
    -webkit-background-clip: text;
-   animation: lds-ring 1.35s cubic-bezier(0.5, 0, 0.5, 1) 2, bg-change 3s ease-in-out, scale-change 0.8s ease-in-out;
+   animation: lds-ring 1.35s cubic-bezier(0.5, 0, 0.5, 1) 2, bg-change 3s ease-in-out, scale-change 1s ease-in-out;
    font-size: 3rem;
    ;
  }

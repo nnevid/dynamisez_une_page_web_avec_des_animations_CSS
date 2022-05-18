@@ -164,8 +164,8 @@ body, p, a, ul, li {
   height: auto;
 }
 
-/* base styles */
-/*Loading Ring*/
+/* Base Styles */
+/* Loading Spinner */
 .lds-ring {
   display: flex;
   position: fixed;
@@ -186,7 +186,7 @@ body, p, a, ul, li {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  animation: lds-ring 1.35s cubic-bezier(0.5, 0, 0.5, 1) 2, bg-change 3s ease-in-out, scale-change 0.8s ease-in-out;
+  animation: lds-ring 1.35s cubic-bezier(0.5, 0, 0.5, 1) 2, bg-change 3s ease-in-out, scale-change 1s ease-in-out;
   font-size: 3rem;
 }
 
@@ -544,11 +544,28 @@ footer {
 .fa-arrow-left {
   font-size: 1.3rem;
   left: 5%;
-  top: 1%;
+  top: 2%;
   position: absolute;
+}
+@media screen and (min-width: 1440px) {
+  .fa-arrow-left {
+    left: auto;
+  }
 }
 
 /*  Layout for Menus Pages */
+@media screen and (min-width: 1440px) {
+  .wrapper-menu {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .wrapper-dish {
+    flex-basis: 30%;
+  }
+}
+
 .menu-prev {
   background-color: #F6F6F6;
   margin-top: -47px;
@@ -557,11 +574,11 @@ footer {
   border: none;
   margin-top: -47px;
   padding: 25px 20px 5px;
-  border-radius: 25px 25px;
+  border-radius: 25px 25px 0 0;
 }
 @media screen and (min-width: 961px) {
   .menu-prev {
-    margin-top: -30%;
+    margin-top: -35%;
   }
 }
 
@@ -573,6 +590,11 @@ footer {
 @media screen and (min-width: 961px) {
   .menu-prev {
     padding: 25px 20% 5px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .menu-prev {
+    padding: 25px 0px 5px;
   }
 }
 .menu-prev__restaurant-heading {
@@ -644,6 +666,11 @@ footer {
 @media screen and (min-width: 800px) {
   .carte-prev__price {
     margin-left: 10%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .carte-prev__price {
+    margin-left: 6%;
   }
 }
 .carte-prev-link {
@@ -722,6 +749,12 @@ footer {
 
 .carte-prev div:nth-child(3) {
   animation-delay: 0.9s;
+}
+
+@media screen and (min-width: 1440px) {
+  .command-btn {
+    margin-top: 30px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

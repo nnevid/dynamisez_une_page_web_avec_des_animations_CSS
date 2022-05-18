@@ -27,7 +27,7 @@ $white: #fff;
    animation-timing-function: ease-in-out;
 }
 // Map for responsive
- $breakpoints: (mobile:500px, tablet:800px, desktop:961px);
+ $breakpoints: (mobile:500px, tablet:800px, desktop:961px, xlScreen:1440px);
 // Mixins for Media Querries
  @mixin tablet-only{
     @media screen and (min-width: map-get($breakpoints, tablet)){
@@ -36,6 +36,11 @@ $white: #fff;
  }
  @mixin desktop {
     @media screen and (min-width: map-get($breakpoints, desktop)){
+       @content;
+    }
+ }
+ @mixin xlScreen {
+    @media screen and (min-width: map-get($breakpoints, xlScreen)){
        @content;
     }
  }

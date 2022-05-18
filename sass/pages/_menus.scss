@@ -14,11 +14,24 @@
 .fa-arrow-left{
    font-size: 1.3rem;
    left: 5%;
-   top: 1%;
+   top: 2%;
    position: absolute;
+   @include xlScreen{left:auto;}
+   
 }
 
 /*  Layout for Menus Pages */
+.wrapper{
+   &-menu{
+      @include xlScreen{
+         display: flex;
+         justify-content: space-evenly;
+      }
+   }
+   &-dish{
+      @include xlScreen{flex-basis: 30%;} 
+   }
+}
 .menu-prev{
    background-color: $main-background;
    @extend %relative-position;
@@ -28,12 +41,13 @@
    border: none;
    margin-top:-47px;
    padding:25px 20px 5px;
-   border-radius: 25px 25px;
-   @include desktop{margin-top: -30%;}
+   border-radius: 25px 25px 0 0;
+   @include desktop{margin-top: -35%;}
 }
 .menu-prev{
    @include tablet-only{padding:25px 15% 5px;} 
    @include desktop{padding:25px 20% 5px;} 
+   @include xlScreen{padding:25px 0px 5px;} 
    &__restaurant-heading{
       font-family: "Shrikhand", cursive;
       font-size: 1.6rem;
@@ -99,6 +113,7 @@
       display: inline-block;
       vertical-align: middle;
       @include tablet-only{margin-left: 10%;}
+      @include xlScreen{margin-left: 6%;}
    }
    &-link{
       width: 100%;
@@ -164,3 +179,6 @@
 .carte-prev div:nth-child(1){animation-delay: 0.35s;}
 .carte-prev div:nth-child(2){animation-delay: 0.7s;}
 .carte-prev div:nth-child(3){animation-delay: .9s;}
+.command-btn{
+   @include xlScreen{margin-top: 30px;}
+}
