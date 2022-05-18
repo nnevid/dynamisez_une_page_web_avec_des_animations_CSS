@@ -274,7 +274,7 @@ form {
 .fa-grey {
   background-color: #F6F6F6;
   height: auto;
-  transition: all 0.9 ease-in-out;
+  transition: all 0.9s ease-in-out;
   animation: fillOut 0.9s ease-in-out forwards;
 }
 .fa-white:hover {

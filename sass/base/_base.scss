@@ -117,7 +117,7 @@ form {
    &-grey{
       background-color: $main-background;
       height: auto;
-      transition: all 0.9 ease-in-out;
+      transition: all 0.9s ease-in-out;
       animation: fillOut 0.9s ease-in-out forwards;
    }
    &-white:hover{
