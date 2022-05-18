@@ -345,6 +345,9 @@ footer {
 .footer-nav__link i {
   color: #fff;
 }
+.footer-nav__link a {
+  color: #fff;
+}
 
 /*Footer Icons Layout*/
 .fa-footer {
