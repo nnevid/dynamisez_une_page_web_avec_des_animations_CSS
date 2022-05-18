@@ -335,6 +335,7 @@ footer {
 @media screen and (min-width: 800px) {
   .footer-nav__link {
     margin: 10px auto;
+    width: 30%;
   }
 }
 @media screen and (min-width: 961px) {
