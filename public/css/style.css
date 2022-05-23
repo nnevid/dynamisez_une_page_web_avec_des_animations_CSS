@@ -690,6 +690,7 @@ footer {
   animation-timing-function: ease-in-out;
   animation-name: out;
   transform-origin: right;
+  cursor: pointer;
 }
 .carte-prev-link:hover {
   animation-name: checked;

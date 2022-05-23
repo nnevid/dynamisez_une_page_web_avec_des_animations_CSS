@@ -128,6 +128,7 @@
       @include base-animation();
       animation-name: out;
       transform-origin: right;
+      cursor: pointer;
    }
    &-link:hover{
       animation-name: checked;
