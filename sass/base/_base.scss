@@ -109,7 +109,9 @@ form {
       -webkit-text-fill-color: transparent;
       -webkit-background-clip: text;
       transform-origin: bottom;
+      
    }
+   
    &-white{
       background-color: $white;
       height: auto;
