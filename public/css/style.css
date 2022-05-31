@@ -109,22 +109,6 @@ footer ul {
     opacity: 1;
   }
 }
-@keyframes checked {
-  from {
-    width: 100%;
-  }
-  to {
-    width: 80%;
-  }
-}
-@keyframes out {
-  from {
-    width: 80%;
-  }
-  to {
-    width: 100%;
-  }
-}
 @keyframes circleRotation {
   from {
     transform: rotate(-180deg);
@@ -684,19 +668,11 @@ footer {
   background-color: #fff;
   position: relative;
   z-index: 100;
-  transition: all 1.5s ease-in-out;
-  animation-duration: 0.7s;
-  animation-fill-mode: both;
-  animation-timing-function: ease-in-out;
-  animation-name: out;
+  transition: all 0.8s ease-in-out;
   cursor: pointer;
 }
 .carte-prev-link:hover {
-  animation-name: checked;
-  transition: all 1.5s ease-in-out;
-  animation-duration: 0.7s;
-  animation-fill-mode: both;
-  animation-timing-function: ease-in-out;
+  width: 80%;
 }
 .carte-prev-card--hidden {
   width: 100%;

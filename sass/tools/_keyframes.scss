@@ -92,16 +92,6 @@
       opacity: 1;
    }
 }
-
-
-@keyframes checked{
-   from{width:100%}
-   to{width:80%}
-}
-@keyframes out{
-   from {width:80%}
-   to{width:100%}
-}
 @keyframes circleRotation{
    from{
       transform: rotate(-180deg);
